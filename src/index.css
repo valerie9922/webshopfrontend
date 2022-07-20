@@ -28,6 +28,7 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
 }
+
 .container-fluid {
   width: 100%;
   padding-right: 2rem;
@@ -40,38 +41,32 @@ a:hover {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
 }
-.herobanner {
-  /* hero */
 
-  position: absolute;
+.hero {
+  background: #8568ff;
   width: 100%;
   height: 527px;
-  left: 0px;
-  top: 146px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-/* Rectangle 115 */
-.herobanner_mask {
+.hero_text_sec {
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-
-  background: #8568ff;
+  left: 19.48%;
+  right: 56.3%;
+  top: 17.99%;
+  bottom: 45.93%;
 }
-/* Rectangle 116 */
-.herobanner_back {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-
-  background: #8568ff;
+.hero_text {
+  font-family: "Crimson Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+  color: #ffffff;
 }
-
-/* Fan */
-.herobanner_fan {
+.hero_fan {
   position: absolute;
   left: 57.08%;
   right: 11.94%;
@@ -83,90 +78,40 @@ a:hover {
   top: 103.875244140625px;
   border-radius: 8px;
 }
-
-/* hanen-souhail-F5EO6OD9kBo-unsplash 2 */
-.herobanner_fan-rect2 {
+.hero_fan_image {
   position: absolute;
-  left: 60.08%;
-  right: 20.79%;
-  top: 30.64%;
-  bottom: -43.36%;
+  left: 4%;
+  right: 25.99%;
+  top: 19.71%;
+  bottom: 25.35%;
+  background: url(hanen-souhail-F5EO6OD9kBo-unsplash\ 1.png);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+}
+.hero_fan_rect1 {
+  position: absolute;
+  bottom: 25.99%;
+  left: 0%;
+  right: 85.79%;
+  top: 25.64%;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   border-radius: 8px;
   transform: matrix(0.99, -0.1, 0.11, 1, 0, 0);
-  height: 358px;
-  width: 201px;
 }
-
-/* hanen-souhail-F5EO6OD9kBo-unsplash 3 */
-.herobanner_fan-rect3 {
+.hero_fan_rect2 {
   position: absolute;
   left: 66.05%;
-  right: 11.83%;
-  top: 21.16%;
-  bottom: -33.88%;
+  right: 21.03%;
+  top: 25.16%;
+  bottom: 25.5%;
 
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   transform: matrix(0.99, 0.1, -0.11, 1, 0, 0);
-  height: 76.5%;
-  width: 25%;
 }
-
-/* hanen-souhail-F5EO6OD9kBo-unsplash 1 */
-.herobanner_fan-image {
-  position: absolute;
-  left: 61.88%;
-  right: 15.99%;
-  top: 19.71%;
-  bottom: -32.37%;
-
-  background: url(hanen-souhail-F5EO6OD9kBo-unsplash\ 1.png);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
-  height: 80.5%;
-  width: 27%;
-}
-
-/* Group 186 */
-.hero_descript {
-  position: absolute;
-  left: 19.48%;
-  right: 56.3%;
-  top: 35.99%;
-  bottom: 45.93%;
-}
-
-/* Products for every need, at the distance of a click. */
-.hero_descript-text {
-  position: absolute;
-  left: 19.48%;
-  right: 56.3%;
-  top: 35.99%;
-  bottom: 45.93%;
-
-  font-family: "Crimson Text";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 47px;
-
-  color: #ffffff;
-}
-
-.hero {
-  /* hero */
-
-  position: absolute;
-  width: 1920px;
-  height: 527px;
-  left: 0px;
-  top: 146px;
-}
-
-/* Group 37 */
+/* Product */
 .product_card {
   position: absolute;
   width: 921px;

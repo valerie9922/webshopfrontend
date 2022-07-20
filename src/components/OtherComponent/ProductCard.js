@@ -1,6 +1,6 @@
 const ProductCard = () => {
   return (
-    <div className="container">
+    <div className="container-">
       <div className="row">
         <div className="col-3">
           <h4>Categories</h4>
