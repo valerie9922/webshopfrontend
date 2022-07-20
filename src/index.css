@@ -1,13 +1,196 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;400&display=swap");
+
+/*Global HTML CSS Settings Start*/
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Crimson", "Crimson Pro", Calibri, "Lato", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+/*Global HTML CSS Settings End*/
+
+.container {
+  width: 1200px;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fluid {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+.herobanner {
+  /* hero */
+
+  position: absolute;
+  width: 100%;
+  height: 527px;
+  left: 0px;
+  top: 146px;
+}
+/* Rectangle 115 */
+.herobanner_mask {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  background: #8568ff;
+}
+/* Rectangle 116 */
+.herobanner_back {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  background: #8568ff;
+}
+
+/* Fan */
+.herobanner_fan {
+  position: absolute;
+  left: 57.08%;
+  right: 11.94%;
+  top: 19.71%;
+  bottom: -42.68%;
+  height: 648.0438232421875px;
+  width: 594.7930297851562px;
+  left: 1096px;
+  top: 103.875244140625px;
+  border-radius: 8px;
+}
+
+/* hanen-souhail-F5EO6OD9kBo-unsplash 2 */
+.herobanner_fan-rect2 {
+  position: absolute;
+  left: 60.08%;
+  right: 20.79%;
+  top: 30.64%;
+  bottom: -43.36%;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  transform: matrix(0.99, -0.1, 0.11, 1, 0, 0);
+  height: 358px;
+  width: 201px;
+}
+
+/* hanen-souhail-F5EO6OD9kBo-unsplash 3 */
+.herobanner_fan-rect3 {
+  position: absolute;
+  left: 66.05%;
+  right: 11.83%;
+  top: 21.16%;
+  bottom: -33.88%;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  transform: matrix(0.99, 0.1, -0.11, 1, 0, 0);
+  height: 76.5%;
+  width: 25%;
+}
+
+/* hanen-souhail-F5EO6OD9kBo-unsplash 1 */
+.herobanner_fan-image {
+  position: absolute;
+  left: 61.88%;
+  right: 15.99%;
+  top: 19.71%;
+  bottom: -32.37%;
+
+  background: url(hanen-souhail-F5EO6OD9kBo-unsplash\ 1.png);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  height: 80.5%;
+  width: 27%;
+}
+
+/* Group 186 */
+.hero_descript {
+  position: absolute;
+  left: 19.48%;
+  right: 56.3%;
+  top: 35.99%;
+  bottom: 45.93%;
+}
+
+/* Products for every need, at the distance of a click. */
+.hero_descript-text {
+  position: absolute;
+  left: 19.48%;
+  right: 56.3%;
+  top: 35.99%;
+  bottom: 45.93%;
+
+  font-family: "Crimson Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+
+  color: #ffffff;
+}
+
+.hero {
+  /* hero */
+
+  position: absolute;
+  width: 1920px;
+  height: 527px;
+  left: 0px;
+  top: 146px;
+}
+
+/* Group 37 */
+.product_card {
+  position: absolute;
+  width: 921px;
+  height: 230px;
+  left: 626px;
+  top: 803px;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.product_card {
+  position: absolute;
+  width: 921px;
+  height: 230px;
+  left: 626px;
+  top: 803px;
+
+  background: #ffffff;
+  box-shadow: 0px 0px 20px 5px rgba(248, 246, 253, 0.75);
+  border-radius: 8px;
 }
