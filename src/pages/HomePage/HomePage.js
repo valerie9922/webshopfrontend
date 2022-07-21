@@ -1,5 +1,6 @@
 import { HeroBanner } from "../../components";
 import { ProductCard } from "../../components/OtherComponent/ProductCard";
+import Footer from "../../components/OtherComponent/Footer";
 const HomePage = () => {
   return (
     <div>
@@ -10,6 +11,10 @@ const HomePage = () => {
       <div>
         {" "}
         <ProductCard />
+      </div>
+      <div>
+        {" "}
+        <Footer />
       </div>
     </div>
   );
