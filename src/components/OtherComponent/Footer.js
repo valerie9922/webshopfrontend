@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-1">
-        <div class="icon-font">
+        <div class="icon-fonts">
           <p>
-            The<span class="white-color">Shop</span>
+            The<span class="purple-color">Shop</span>
           </p>
         </div>
       </div>

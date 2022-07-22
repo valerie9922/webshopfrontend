@@ -52,6 +52,9 @@ a:hover {
   color: #535399;
   padding: 0 1rem;
 }
+.text-center {
+  text-align: center;
+}
 /*Global HTML CSS Settings End*/
 
 .container {
@@ -258,7 +261,10 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 2rem;
+}
+footer .footer-1 {
+  align-items: center;
 }
 .footer-2 > h2,
 .footer-3 > h2,
@@ -276,4 +282,154 @@ a:hover {
   color: white;
   width: 20px;
   margin: 5px;
+}
+.icon-fonts {
+  font-size: 3rem;
+  color: white;
+  align-items: center;
+  margin: 3.8rem 0;
+}
+.purple-color {
+  color: #8568ff;
+}
+.card {
+  background: linear-gradient(
+    180deg,
+    rgb(223, 219, 255),
+    rgba(234, 229, 255, 0) 20.71%
+  );
+}
+
+.cardDetail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-self: auto;
+  width: 100%;
+}
+.cardDetail_product {
+  width: 240px;
+}
+.cardDetail_price {
+  width: 130px;
+}
+.cardDetail_quantity {
+  width: 130px;
+}
+.cardDetail_total {
+  width: 130px;
+}
+.cardTotal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-self: auto;
+}
+.pageTitle {
+  width: 100%;
+}
+.pageTitle > h1 {
+  display: block;
+  width: 350px;
+  margin: 2rem 0;
+}
+
+.cardItems {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 776px;
+}
+.cardImage {
+  width: 60px;
+}
+.pcimage {
+  display: inline-block;
+  width: 250px;
+  text-align: left;
+}
+.pcprice {
+  display: block;
+  width: 150px;
+}
+.pcquantity {
+  display: block;
+  width: 150px;
+}
+.pctotal {
+  display: block;
+  width: 140px;
+}
+.cardItems ul div {
+  display: inline-block !important;
+}
+.cardTotal {
+  background-color: #e8e6f1;
+  width: 371px;
+  height: 284px;
+  border-radius: 10px;
+}
+.col-3 h3 {
+  font-size: 1.25rem;
+  color: #1d3178;
+  margin-bottom: 1rem;
+  text-align: center;
+  display: block;
+  width: 371px;
+}
+.btn {
+  padding: 10px 0;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+.btn-card {
+  background-color: #19d16f;
+  border-color: transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 312px;
+  height: 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+.card_check_text {
+  color: #8a91ab;
+}
+.card_subtotal :first-child {
+  width: 100px;
+  color: #1d3178;
+  font-size: 1.25rem;
+  display: inline-block;
+  text-align: left;
+}
+.card_subtotal :nth-child(2) {
+  width: 100px;
+  color: #1d3178;
+  font-size: 1.25rem;
+  display: inline-block;
+  text-align: right;
+}
+.card_total :first-child {
+  width: 100px;
+  color: #1d3178;
+  font-size: 1.25rem;
+  display: inline-block;
+  text-align: left;
+}
+.card_total :nth-child(2) {
+  width: 100px;
+  color: #1d3178;
+  font-size: 1.25rem;
+  display: inline-block;
+  text-align: right;
+}
+hr {
+  width: 55%;
+  margin: 0 auto;
+  margin-top: -1.5rem;
+  border-top: 2px solid #c3c3c3;
 }

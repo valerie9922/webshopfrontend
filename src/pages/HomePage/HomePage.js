@@ -12,10 +12,6 @@ const HomePage = () => {
         {" "}
         <ProductCard />
       </div>
-      <div>
-        {" "}
-        <Footer />
-      </div>
     </div>
   );
 };
