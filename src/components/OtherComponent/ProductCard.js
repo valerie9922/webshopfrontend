@@ -1,30 +1,58 @@
 import { AiFillCheckSquare, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import React from "react";
-
+// import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductBlock from "./ProductBlock";
 import CategoryBlock from "./CategoryBlock";
+import Pagination from "./Pagination";
 
-const ProductCard = () => {
-  const [products, setProducts] = useState(null);
+const ProductCard = ({ id }, props) => {
+  const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(null);
 
-  const getProducts = async () => {
-    const result = await axios.get("http://localhost:4000/products");
-    console.log("Products are here", result.data);
+  const handCategory = (categoryIds) => {
+    const selectedProducts = products.filter(
+      (product) => product.categoryId === parseInt(categoryIds)
+      // categoryIds.includes(product.categoryId)
+    );
+    setCategories(categories);
+    setProducts(selectedProducts);
+    // setProducts({ ...selectedCategory, id });
+    console.log("Selected Category Id: ", selectedProducts);
+  };
+
+  const getProducts = async (id) => {
+    let url = "http://localhost:4000/products/";
+    if (id) {
+      url += "category/" + id;
+    }
+    const result = await axios.get(url);
+    // console.log("Products are here", result.data);
     return setProducts(result.data);
   };
   const getCategories = async () => {
     const response = await axios.get("http://localhost:4000/categories");
-    console.log("Categories are here", response.data);
+    // console.log("Categories are here", response.data);
     return setCategories(response.data);
   };
+
   useEffect(() => {
     getProducts();
     getCategories();
   }, []);
-
+  //Get current products
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(5);
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
   return (
     <div className="container m-4">
       <div className="row">
@@ -34,7 +62,12 @@ const ProductCard = () => {
             <ul>
               {categories ? (
                 categories.map((category, index) => (
-                  <CategoryBlock key={index} title={category.title} />
+                  <CategoryBlock
+                    key={index}
+                    id={category.id}
+                    title={category.title}
+                    handCategory={handCategory}
+                  />
                 ))
               ) : (
                 <p>Loading..</p>
@@ -137,20 +170,31 @@ const ProductCard = () => {
             </ul>
           </div>
           <div className="col-9 ">
-            {products ? (
-              products.map((item, index) => (
+            {currentProducts ? (
+              currentProducts.map((item) => (
+                // <Link to={`/products/${item.id}`}>
                 <ProductBlock
-                  key={index}
+                  key={item.id}
+                  id={item.id}
+                  categoryId={item.categoryId}
                   title={item.title.substring(0, 40) + " ..."}
                   price={item.price}
                   image={item.mainImage}
                   description={item.description.substring(0, 100) + " ..."}
                   rating={item.rating}
                 />
+                // </Link>
               ))
             ) : (
               <p>Loading...</p>
             )}
+          </div>
+          <div className="col-12">
+            <Pagination
+              productsPerPage={productsPerPage}
+              totalProducts={products.length}
+              paginate={paginate}
+            />
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 require("./styles.css");
 
-const NavBar = () => {
+const NavBar = ({ id }) => {
   return (
     <div className="navbar-container">
       <div className="level2-container">
@@ -20,7 +20,13 @@ const NavBar = () => {
           <div className="link-search">
             <ul className="nav-ul">
               <li>
-                <NavLink className="navItem" to="/">
+                <NavLink
+                  className="navItem"
+                  to="/"
+                  style={({ isActive }) =>
+                    isActive ? { color: "tomato" } : undefined
+                  }
+                >
                   Home
                 </NavLink>
               </li>
@@ -31,7 +37,7 @@ const NavBar = () => {
                   to="/shop"
                   className="links"
                   style={({ isActive }) =>
-                    isActive ? { color: "white" } : undefined
+                    isActive ? { color: "tomato" } : undefined
                   }
                 >
                   Shop
@@ -39,7 +45,13 @@ const NavBar = () => {
               </li>
               <li>Contact</li>
               <li>
-                <NavLink className="navItem" to="/details">
+                <NavLink
+                  className="navItem"
+                  to={`/products/${id}`}
+                  style={({ isActive }) =>
+                    isActive ? { color: "tomato" } : undefined
+                  }
+                >
                   Product Details
                 </NavLink>
               </li>
@@ -55,11 +67,17 @@ const NavBar = () => {
       <div className="iconContainer">
         <ul className="nav-ul">
           <li>
-            <a href="/#">
+            <NavLink
+              className="navItem"
+              to={`/login`}
+              style={({ isActive }) =>
+                isActive ? { color: "tomato" } : undefined
+              }
+            >
               <span className="white-color">
                 <AiOutlineUser />
               </span>
-            </a>
+            </NavLink>
           </li>
           <li>
             <a href="/#">
